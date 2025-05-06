@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - Photography Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="container nav__container">
+        <a href="index.html" class="nav__logo">Amalrag C</a>
+        <button class="nav__toggle" aria-label="Toggle menu">
+          <span class="nav__toggle-line"></span>
+          <span class="nav__toggle-line"></span>
+          <span class="nav__toggle-line"></span>
+        </button>
+        <div class="nav__links">
+          <a href="index.html" class="nav__link">Home</a>
+          <a href="gallery.html" class="nav__link">Gallery</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <h1 class="text-center mb-xl fade-in">Gallery</h1>
+
+          <!-- Work Section -->
+          <div class="mb-xl fade-in">
+            <h2 class="mb-lg">Work</h2>
+            <div class="gallery">
+              <!-- Add your work images here -->
+              <div class="gallery__item">
+                <img
+                  src="images/work/work-1.jpg"
+                  alt="Work photography"
+                  class="gallery__image"
+                />
+                <div class="gallery__caption">Fisherman at dawn</div>
+              </div>
+              <div class="gallery__item">
+                <img
+                  src="images/work/work-2.jpg"
+                  alt="Work photography"
+                  class="gallery__image"
+                />
+                <div class="gallery__caption">Street vendor</div>
+              </div>
+              <!-- Add more work images as needed -->
+            </div>
+          </div>
+
+          <!-- Worship Section -->
+          <div class="mb-xl fade-in">
+            <h2 class="mb-lg">Worship</h2>
+            <div class="gallery">
+              <!-- Add your worship images here -->
+              <div class="gallery__item">
+                <img
+                  src="images/worship/worship-1.jpg"
+                  alt="Worship photography"
+                  class="gallery__image"
+                />
+                <div class="gallery__caption">Morning prayers</div>
+              </div>
+              <div class="gallery__item">
+                <img
+                  src="images/worship/worship-2.jpg"
+                  alt="Worship photography"
+                  class="gallery__image"
+                />
+                <div class="gallery__caption">Temple festival</div>
+              </div>
+              <!-- Add more worship images as needed -->
+            </div>
+          </div>
+
+          <!-- Living Section -->
+          <div class="mb-xl fade-in">
+            <h2 class="mb-lg">Living</h2>
+            <div class="gallery">
+              <!-- Add your living images here -->
+              <div class="gallery__item">
+                <img
+                  src="images/living/living-1.jpg"
+                  alt="Living photography"
+                  class="gallery__image"
+                />
+                <div class="gallery__caption">Street life</div>
+              </div>
+              <div class="gallery__item">
+                <img
+                  src="images/living/living-2.jpg"
+                  alt="Living photography"
+                  class="gallery__image"
+                />
+                <div class="gallery__caption">Market day</div>
+              </div>
+              <!-- Add more living images as needed -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
