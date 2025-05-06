@@ -11,6 +11,86 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/main.css" />
+    <style>
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 1;
+        cursor: pointer;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.05);
+      }
+
+      /* Portrait images */
+      .gallery-item.portrait {
+        aspect-ratio: 2/3;
+      }
+
+      /* Landscape images */
+      .gallery-item.landscape {
+        aspect-ratio: 3/2;
+      }
+
+      /* Square images */
+      .gallery-item.square {
+        aspect-ratio: 1/1;
+      }
+
+      /* Wide images */
+      .gallery-item.wide {
+        aspect-ratio: 16/9;
+      }
+
+      /* Lightbox styles */
+      .lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        z-index: 1000;
+        cursor: pointer;
+      }
+
+      .lightbox.active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .lightbox img {
+        max-width: 90%;
+        max-height: 90vh;
+        object-fit: contain;
+      }
+
+      .lightbox-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
     <nav class="nav">
@@ -36,81 +116,696 @@
           <!-- Work Section -->
           <div class="mb-xl fade-in">
             <h2 class="mb-lg">Work</h2>
-            <div class="gallery">
-              <!-- Add your work images here -->
-              <div class="gallery__item">
+            <div class="gallery-grid">
+              <div class="gallery-item">
                 <img
-                  src="images/work/work-1.jpg"
-                  alt="Work photography"
-                  class="gallery__image"
+                  src="images/work/work-05.jpg"
+                  alt="Work Photography"
+                  loading="lazy"
                 />
-                <div class="gallery__caption">Fisherman at dawn</div>
               </div>
-              <div class="gallery__item">
+              <div class="gallery-item">
                 <img
-                  src="images/work/work-2.jpg"
-                  alt="Work photography"
-                  class="gallery__image"
+                  src="images/work/work-09.jpg"
+                  alt="Work Photography"
+                  loading="lazy"
                 />
-                <div class="gallery__caption">Street vendor</div>
               </div>
-              <!-- Add more work images as needed -->
+              <div class="gallery-item">
+                <img
+                  src="images/work/work-12.jpg"
+                  alt="Work Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/work/work-27.jpg"
+                  alt="Work Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/work/work-33.jpg"
+                  alt="Work Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/work/work-42.jpg"
+                  alt="Work Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/work/work-47.jpg"
+                  alt="Work Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/work/work-52.jpg"
+                  alt="Work Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/work/work-58.jpg"
+                  alt="Work Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/work/work-64.jpg"
+                  alt="Work Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/work/work-68.jpg"
+                  alt="Work Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/work/work-73.jpg"
+                  alt="Work Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/work/work-74.jpg"
+                  alt="Work Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/work/work-77.jpg"
+                  alt="Work Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/work/work-78.jpg"
+                  alt="Work Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/work/work-80.jpg"
+                  alt="Work Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/work/work-82.jpg"
+                  alt="Work Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/work/work-86.jpg"
+                  alt="Work Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/work/work-88.jpg"
+                  alt="Work Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/work/work-89.jpg"
+                  alt="Work Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/work/work-93.jpg"
+                  alt="Work Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/work/work-94.jpg"
+                  alt="Work Photography"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
 
           <!-- Worship Section -->
           <div class="mb-xl fade-in">
             <h2 class="mb-lg">Worship</h2>
-            <div class="gallery">
-              <!-- Add your worship images here -->
-              <div class="gallery__item">
+            <div class="gallery-grid">
+              <div class="gallery-item">
                 <img
-                  src="images/worship/worship-1.jpg"
-                  alt="Worship photography"
-                  class="gallery__image"
+                  src="images/worship/worship-08.jpg"
+                  alt="Worship Photography"
+                  loading="lazy"
                 />
-                <div class="gallery__caption">Morning prayers</div>
               </div>
-              <div class="gallery__item">
+              <div class="gallery-item">
                 <img
-                  src="images/worship/worship-2.jpg"
-                  alt="Worship photography"
-                  class="gallery__image"
+                  src="images/worship/worship-15.jpg"
+                  alt="Worship Photography"
+                  loading="lazy"
                 />
-                <div class="gallery__caption">Temple festival</div>
               </div>
-              <!-- Add more worship images as needed -->
+              <div class="gallery-item">
+                <img
+                  src="images/worship/worship-16.jpg"
+                  alt="Worship Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/worship/worship-19.jpg"
+                  alt="Worship Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/worship/worship-21.jpg"
+                  alt="Worship Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/worship/worship-23.jpg"
+                  alt="Worship Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/worship/worship-25.jpg"
+                  alt="Worship Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/worship/worship-26.jpg"
+                  alt="Worship Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/worship/worship-32.jpg"
+                  alt="Worship Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/worship/worship-33.jpg"
+                  alt="Worship Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/worship/worship-37.jpg"
+                  alt="Worship Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/worship/worship-38.jpg"
+                  alt="Worship Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/worship/worship-39.jpg"
+                  alt="Worship Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/worship/worship-49.jpg"
+                  alt="Worship Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/worship/worship-50.jpg"
+                  alt="Worship Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/worship/worship-51.jpg"
+                  alt="Worship Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/worship/worship-53.jpg"
+                  alt="Worship Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/worship/worship-57.jpg"
+                  alt="Worship Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/worship/worship-61.jpg"
+                  alt="Worship Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/worship/worship-63.jpg"
+                  alt="Worship Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/worship/worship-68.jpg"
+                  alt="Worship Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/worship/worship-70.jpg"
+                  alt="Worship Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/worship/worship-74.jpg"
+                  alt="Worship Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/worship/worship-76.jpg"
+                  alt="Worship Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/worship/worship-86.jpg"
+                  alt="Worship Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/worship/worship-89.jpg"
+                  alt="Worship Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/worship/worship-91.jpg"
+                  alt="Worship Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/worship/worship-95.jpg"
+                  alt="Worship Photography"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
 
           <!-- Living Section -->
           <div class="mb-xl fade-in">
             <h2 class="mb-lg">Living</h2>
-            <div class="gallery">
-              <!-- Add your living images here -->
-              <div class="gallery__item">
+            <div class="gallery-grid">
+              <div class="gallery-item">
                 <img
-                  src="images/living/living-1.jpg"
-                  alt="Living photography"
-                  class="gallery__image"
+                  src="images/living/living-03.jpg"
+                  alt="Living Photography"
+                  loading="lazy"
                 />
-                <div class="gallery__caption">Street life</div>
               </div>
-              <div class="gallery__item">
+              <div class="gallery-item">
                 <img
-                  src="images/living/living-2.jpg"
-                  alt="Living photography"
-                  class="gallery__image"
+                  src="images/living/living-09.jpg"
+                  alt="Living Photography"
+                  loading="lazy"
                 />
-                <div class="gallery__caption">Market day</div>
               </div>
-              <!-- Add more living images as needed -->
+              <div class="gallery-item">
+                <img
+                  src="images/living/living-11.jpg"
+                  alt="Living Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/living/living-15.jpg"
+                  alt="Living Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/living/living-18.jpg"
+                  alt="Living Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/living/living-19.jpg"
+                  alt="Living Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/living/living-20.jpg"
+                  alt="Living Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/living/living-21.jpg"
+                  alt="Living Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/living/living-25.jpg"
+                  alt="Living Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/living/living-26.jpg"
+                  alt="Living Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/living/living-28.jpg"
+                  alt="Living Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/living/living-39.jpg"
+                  alt="Living Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/living/living-41.jpg"
+                  alt="Living Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/living/living-45.jpg"
+                  alt="Living Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/living/living-48.jpg"
+                  alt="Living Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/living/living-49.jpg"
+                  alt="Living Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/living/living-61.jpg"
+                  alt="Living Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/living/living-64.jpg"
+                  alt="Living Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/living/living-66.jpg"
+                  alt="Living Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/living/living-67.jpg"
+                  alt="Living Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/living/living-69.jpg"
+                  alt="Living Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/living/living-77.jpg"
+                  alt="Living Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/living/living-82.jpg"
+                  alt="Living Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/living/living-93.jpg"
+                  alt="Living Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/living/living-94.jpg"
+                  alt="Living Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/living/living-97.jpg"
+                  alt="Living Photography"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Travel Section -->
+          <div class="mb-xl fade-in">
+            <h2 class="mb-lg">Travel</h2>
+            <div class="gallery-grid">
+              <div class="gallery-item">
+                <img
+                  src="images/travel/travel-05.jpg"
+                  alt="Travel Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/travel/travel-10.jpg"
+                  alt="Travel Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/travel/travel-11.jpg"
+                  alt="Travel Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/travel/travel-12.jpg"
+                  alt="Travel Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/travel/travel-16.jpg"
+                  alt="Travel Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/travel/travel-37.jpg"
+                  alt="Travel Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/travel/travel-42.jpg"
+                  alt="Travel Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/travel/travel-54.jpg"
+                  alt="Travel Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/travel/travel-56.jpg"
+                  alt="Travel Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/travel/travel-62.jpg"
+                  alt="Travel Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/travel/travel-63.jpg"
+                  alt="Travel Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/travel/travel-82.jpg"
+                  alt="Travel Photography"
+                  loading="lazy"
+                />
+              </div>
+              <div class="gallery-item">
+                <img
+                  src="images/travel/travel-83.jpg"
+                  alt="Travel Photography"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
 
+    <div class="lightbox" id="lightbox">
+      <span class="lightbox-close">&times;</span>
+      <img src="" alt="Enlarged view" />
+    </div>
+
     <script src="js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = lightbox.querySelector("img");
+        const closeBtn = lightbox.querySelector(".lightbox-close");
+        const galleryItems = document.querySelectorAll(".gallery-item");
+
+        galleryItems.forEach((item) => {
+          item.addEventListener("click", function () {
+            const imgSrc = this.querySelector("img").src;
+            lightboxImg.src = imgSrc;
+            lightbox.classList.add("active");
+          });
+        });
+
+        function closeLightbox() {
+          lightbox.classList.remove("active");
+        }
+
+        closeBtn.addEventListener("click", closeLightbox);
+        lightbox.addEventListener("click", function (e) {
+          if (e.target === lightbox) {
+            closeLightbox();
+          }
+        });
+
+        // Close lightbox with Escape key
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && lightbox.classList.contains("active")) {
+            closeLightbox();
+          }
+        });
+      });
+    </script>
   </body>
 </html>
