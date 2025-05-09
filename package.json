@@ -1,0 +1,11 @@
+{
+  "name": "photography-portfolio",
+  "version": "1.0.0",
+  "description": "Photography portfolio website",
+  "scripts": {
+    "optimize": "node optimize-images.js"
+  },
+  "dependencies": {
+    "sharp": "^0.32.1"
+  }
+}
